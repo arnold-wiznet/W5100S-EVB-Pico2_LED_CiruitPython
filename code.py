@@ -181,15 +181,15 @@ while power:
             
     time.sleep(0.5)
     
-
+# Power turns Off
 print("Power is off")
+
+# Reset to Default Values on Adafruit IO
 for y in range(current_light_on_pos + 1):
     mqtt_client.publish(led_feed[y], 0)
 mqtt_client.publish(controller_feed, 0)
 
+#Disconnecting From the Server
 mqtt_client.disconnect()
+
 print("Machine Tunred off")
-
-
-
-
