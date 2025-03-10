@@ -4,7 +4,6 @@
 import time
 import ssl
 import board
-from math import sqrt
 from digitalio import DigitalInOut, Direction
 from analogio import AnalogIn
 import adafruit_connection_manager
