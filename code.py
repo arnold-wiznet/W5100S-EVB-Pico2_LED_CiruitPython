@@ -157,8 +157,9 @@ while power:
         if current_light_on_pos == 2  : # All lights are on
             print("Max_light_achieved")
         else:
-            led_set[current_light_on_pos + 1].value = True
             current_light_on_pos = current_light_on_pos + 1
+            led_set[current_light_on_pos].value = True
+            
 
             # Send Data
             mqtt_client.publish(led_feed[current_light_on_pos], 1)
