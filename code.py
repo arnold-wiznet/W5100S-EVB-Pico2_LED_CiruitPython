@@ -131,7 +131,7 @@ mqtt_client.publish(power_feed, 1)
 Dir_Vertical = AnalogIn(board.GP26) #UP/Down
 # Dir_Horizontal = AnalogIn(board.GP27) #Left/Right
 
-#Set LED as digital ouput
+#Set LED as digital output
 led_G, led_Y, led_R = DigitalInOut(board.GP11), DigitalInOut(board.GP13), DigitalInOut(board.GP15)
 led_G.direction, led_Y.direction, led_R.direction = Direction.OUTPUT, Direction.OUTPUT, Direction.OUTPUT
 led_set = [led_R, led_Y, led_G]
