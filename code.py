@@ -83,8 +83,9 @@ def message(client, topic, message):
             if current_light_on_pos == 2  :   # All lights are On
                 print("Max_light_achieved")
             else:
-                led_set[current_light_on_pos + 1].value = True  # Turn On the next light
                 current_light_on_pos = current_light_on_pos + 1 # Increase pointer
+                led_set[current_light_on_pos].value = True  # Turn On the next light
+               
 
                 # Send Data to online interface
                 mqtt_client.publish(led_feed[current_light_on_pos], 1)
